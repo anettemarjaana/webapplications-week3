@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Tic Tac Toe Game For 2</title>
+    <script src="./src/js/index.js"></script>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="src/css/materialize.min.css"
+      media="screen,projection"
+    />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+      <div class="row">
+          <div class="col s12 pink">
+            <h3>Tic Tac Toe Game For 2</h3>
+          </div>
+      </div>
+
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col s4 m4 l3 sidebar yellow lighten-5 flow-text">
+          
+          <h5>Rules of the game</h5>
+          <small>
+          <p>The game is played on a grid that's 5 squares by 5 squares.</p>
+          <p>The mark of the player 1 is X and that of the player 2 is O.</p>
+          <p>The first player to get 5 of their marks in a row 
+            (vertically, horizontally or diagonally) is the winner.</p>
+            <p>If all 25 squares get full, it's a tie.</p>
+            
+          <h5 id="winnertext">Good luck!</h5>
+          
+          <button id="rematch" class="button1">Start game</button>
+          </small>
+        </div>
+
+        <div class="col s8 m8 l9">
+            <p class="flow-text">
+            Welcome to play Tic Tac Toe!</p>
+        
+       
+          <h5>Game board</h5>
+  
+          <p class="flow-text">
+            <b>Whose turn?</b> Player <span id="samplepar">1</span>
+          </p>
+    
+          
+          <div class="progress #BDBDBD">
+            <div class="determinate yellow accent-2" id="gamebar" style="width: 100%">
+              <span id="timeleft">10</span></div>
+          </div>
+
+          <grid-table id="board"></grid-table>
+    
+  
+    </div>
+  </div>
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="src/js/materialize.min.js"></script>
+  </body>
+</html>
