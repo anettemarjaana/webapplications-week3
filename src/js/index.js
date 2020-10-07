@@ -89,10 +89,10 @@ function checkTurns(lastround) {
 
   if (checker < 0) {
     if (lastround == 1) {
-      alert("Player 1 lost their turn!");
+      //alert("Player 1 lost their turn!");
       lastround = 2;
     } else if (lastround == 2) {
-      alert("Player 2 lost their turn!");
+      //alert("Player 2 lost their turn!");
       lastround = 1;
     }
     /* Set the next turn's player symbol: */
@@ -185,11 +185,6 @@ function calculateWinCondition(playerno) {
   /* We use the symbols in checking the winning
     conditions as they are the names of the classes
     of the cells, too. */
-  if (playerno == 1) {
-    player = "x";
-  } else if (playerno == 2) {
-    player = "o";
-  }
 
   console.log("Calculating the winning condition");
 
@@ -208,15 +203,21 @@ function calculateWinCondition(playerno) {
     diagonal1 = [],
     diagonal2 = [];
 
+  if (playerno == 1) {
+    player = "x";
+  } else if (playerno == 2) {
+    player = "o";
+  }
+
   /* Get the children of our grid layout: */
   var children = tbl.children;
 
   // CHECK THE WINNING CONDITIONS.
-  for (var i = 0; i < 5; i++) {
+  for (i = 0; i < 5; i++) {
     // Check 5 elements a row at a time
     result = true;
     // CHECKING FOR THE RESULT OF EACH ROW:
-    for (var j = 0; j < children.length; j++) {
+    for (j = 0; j < children.length; j++) {
       cell = children[j];
       result = result && cell.className === player;
       // if any of the cells in the row is not equal to the player symbol, this Boolean value will be false.
@@ -350,7 +351,7 @@ function moveProgressBar() {
     - start moveProgressBar over */
     if (time <= 0) {
       clearInterval(timerID);
-      alert("Time ended!");
+      //alert("Time ended!");
       checker = -1;
       var lastround = document.getElementById("samplepar").innerHTML;
       checkTurns(lastround);
